@@ -1,0 +1,8 @@
+---
+- name: Ping status of server
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Server name
+      ping:
+      
