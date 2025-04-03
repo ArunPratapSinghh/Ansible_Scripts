@@ -1,0 +1,12 @@
+###httpd service install
+
+---
+- name: Install the package
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: install apache
+      yum:
+        name: httpd
+        state: latest
+        enabled : true
