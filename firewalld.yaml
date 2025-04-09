@@ -1,1 +1,13 @@
 
+###firewalld install##
+
+---
+- name: Install the package
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: install firewalld
+      yum:
+        name: firewalld
+        state: latest
+        enabled : true
